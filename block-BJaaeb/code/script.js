@@ -51,3 +51,47 @@ createTodoList([
   { name: 'Learn React', isDone: true },
   { name: 'Learn JS', isDone: true },
 ]);
+
+// not reference
+function createInputElm(label,type='text'){
+  let input= document.createElement('input');
+  input.type=type;
+  let lab=document.createElement('label');
+  lab.innerText=label;
+  lab.append(input);
+
+return lab;
+}
+
+
+function createInputElm(ele,type='text'){
+  let elm=`<label>${ele} <input type="${type}"></label>`
+  
+  return elm;
+  }
+
+
+  function createList(arr){
+
+    let ul=document.createElement('ul');
+    for(let i=0;i<arr.length;i++){
+      let li=document.createElement('li');
+      li.innerText=arr[i];
+      ul.append(li); 
+    }
+   
+   return ul;
+  }
+
+  function createTodoList(arr){
+    let html=`<ul> ${arr.map((todo)=>
+    `<li>
+     <p>${todo.name}</p>
+     <input type='checkbox' ${todo.isDone?"checked":""} name="",id="">
+     <span>X</span>
+     </li>`
+    ).join("")}
+    </ul>`;
+    return html;
+  
+  }
