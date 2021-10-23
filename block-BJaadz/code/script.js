@@ -54,6 +54,7 @@ heading.style.fontSize = "3rem";
 allHrs.style.
 
 // Hide the box number 17 (last box).
+From here
 
 // Change the border of all the hr element from solid to dashed type
 
